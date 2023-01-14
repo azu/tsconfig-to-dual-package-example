@@ -1,4 +1,4 @@
-import { sum } from "../lib";
+import { sum } from "../src";
 import { describe, it } from "node:test";
 import assert from "assert";
 describe("sum", function() {
