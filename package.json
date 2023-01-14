@@ -41,7 +41,7 @@
   "scripts": {
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
     "clean": "git clean -fx lib/ module/",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "test": "node --test --loader ts-node/esm ./test/*.ts",
     "watch": "tsc -p . --watch"
   },
