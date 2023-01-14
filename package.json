@@ -20,15 +20,15 @@
   "author": "azu",
   "sideEffects": false,
   "type": "module",
-  "main": "./lib/tsconfig-to-dual-package-example.js",
-  "module": "./module/tsconfig-to-dual-package-example.js",
-  "types": "./module/tsconfig-to-dual-package-example.d.ts",
+  "main": "./lib/index.js",
+  "module": "./module/index.js",
+  "types": "./module/index.d.ts",
   "exports": {
     ".": {
-      "types": "./module/tsconfig-to-dual-package-example.d.ts",
-      "import": "./module/tsconfig-to-dual-package-example.js",
-      "require": "./lib/tsconfig-to-dual-package-example.js",
-      "default": "./lib/tsconfig-to-dual-package-example.js"
+      "types": "./module/index.d.ts",
+      "import": "./module/index.js",
+      "require": "./lib/index.js",
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
