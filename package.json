@@ -19,9 +19,19 @@
   "license": "MIT",
   "author": "azu",
   "sideEffects": false,
-  "main": "./lib/index.js",
-  "module": "./module/index.js",
-  "types": "./lib/index.d.ts",
+  "type": "module",
+  "main": "./lib/tsconfig-to-dual-package-example.js",
+  "module": "./module/tsconfig-to-dual-package-example.js",
+  "types": "./module/tsconfig-to-dual-package-example.d.ts",
+  "exports": {
+    ".": {
+      "types": "./module/tsconfig-to-dual-package-example.d.ts",
+      "import": "./module/tsconfig-to-dual-package-example.js",
+      "require": "./lib/tsconfig-to-dual-package-example.js",
+      "default": "./lib/tsconfig-to-dual-package-example.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "bin/",
     "lib/",
@@ -29,15 +39,16 @@
     "src/"
   ],
   "scripts": {
-    "build": "tsc -p ./tsconfig.json",
+    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
     "clean": "git clean -fx lib/ module/",
-    "prepublishOnly": "npm run clean && npm run build",
-    "test": "node --test --require ts-node/register ./test/*.ts",
+    "prepublishOnly": "npm run build",
+    "test": "node --test --require ts-node/esm ./test/*.ts",
     "watch": "tsc -p . --watch"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "ts-node": "^10.9.1",
+    "tsconfig-to-dual-package": "^1.0.7",
     "typescript": "^4.9.4"
   },
   "packageManager": "npm@9.2.0"
