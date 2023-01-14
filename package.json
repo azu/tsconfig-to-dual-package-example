@@ -1,0 +1,51 @@
+{
+  "name": "tsconfig-to-dual-package-example",
+  "version": "1.0.0",
+  "description": "An example for tsconfig-to-dual-package",
+  "keywords": [
+    "typescript",
+    "dual-package",
+    "npm",
+    "node"
+  ],
+  "homepage": "https://github.com/azu/tsconfig-to-dual-package-example",
+  "bugs": {
+    "url": "https://github.com/azu/tsconfig-to-dual-package-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/tsconfig-to-dual-package-example.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "module/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "bin/",
+    "lib/",
+    "module/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "clean": "git clean -fx lib/ module/",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "node --test --require ts-node/register ./test/*.ts",
+    "watch": "tsc -p . --watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "packageManager": "npm@9.2.0"
+}
