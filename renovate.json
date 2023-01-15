@@ -1,6 +1,14 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>azu/renovate-config"
+    "@azu:maintenance"
+  ],
+  "packageRules": [
+    {
+      "groupName": " tsconfig-to-dual-package",
+      "matchPackageNames": ["tsconfig-to-dual-package"],
+      "major": {
+        "enabled": true
+      }
+    }
   ]
 }
