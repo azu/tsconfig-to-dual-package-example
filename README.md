@@ -26,6 +26,13 @@ const { sum } = require("@azu/tsconfig-to-dual-package-example");
 console.log(sum(1,2,3,4,5)) // => 15
 ```
 
+Use it from browser
+
+```js
+const { sum } = await import("https://unpkg.com/@azu/tsconfig-to-dual-package-example@1.0.1/module/index.js?module");
+console.log(sum(1,2,3,4,5)) // => 15
+```
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/tsconfig-to-dual-package-example/releases).
