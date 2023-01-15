@@ -8,6 +8,8 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install @azu/tsconfig-to-dual-package-example
 
+- Distribution files: https://www.npmjs.com/package/@azu/tsconfig-to-dual-package-example?activeTab=explore
+
 ## Usage
 
 ```js
