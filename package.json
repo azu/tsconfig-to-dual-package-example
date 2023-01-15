@@ -1,6 +1,6 @@
 {
   "name": "@azu/tsconfig-to-dual-package-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An example for tsconfig-to-dual-package",
   "keywords": [
     "typescript",
