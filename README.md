@@ -12,8 +12,17 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
+Use it in `index.mjs`
+
 ```js
 import { sum } from "@azu/tsconfig-to-dual-package-example"
+console.log(sum(1,2,3,4,5)) // => 15
+```
+
+Use it in `index.cjs`
+
+```js
+const { sum } = require("@azu/tsconfig-to-dual-package-example");
 console.log(sum(1,2,3,4,5)) // => 15
 ```
 
