@@ -1,16 +1,20 @@
 # tsconfig-to-dual-package-example
 
-An example for tsconfig-to-dual-package
+An example for [tsconfig-to-dual-package](https://github.com/azu/tsconfig-to-dual-package).
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install tsconfig-to-dual-package-example
+    npm install @azu/tsconfig-to-dual-package-example
 
 ## Usage
 
-- [ ] Write usage instructions
+```
+import { sum } from "@azu/tsconfig-to-dual-package-example"
+console.log(sum(1,2,3,4,5)) // => 15
+```);
+```
 
 ## Changelog
 
