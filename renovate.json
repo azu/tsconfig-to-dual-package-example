@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>azu/renovate-config:non-major"
+    "github>azu/renovate-config"
   ],
   "packageRules": [
     {
